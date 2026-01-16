@@ -1,0 +1,13 @@
+{
+    "name": "scraper",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "build": "echo 'No build script yet'",
+        "dev": "docker compose exec python-app uv run python -m src.jobs.fetcher",
+        "start": "docker compose exec python-app uv run python -m src.jobs.fetcher"
+    },
+    "dependencies": {
+        "db": "workspace:*"
+    }
+}

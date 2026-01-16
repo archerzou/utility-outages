@@ -1,0 +1,670 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 1,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "cf1leehcbn11cd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "red",
+            "mode": "continuous-YlRd"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "basemap": {
+          "config": {},
+          "name": "Layer 0",
+          "noRepeat": false,
+          "type": "default"
+        },
+        "controls": {
+          "mouseWheelZoom": true,
+          "showAttribution": true,
+          "showDebug": false,
+          "showMeasure": false,
+          "showScale": false,
+          "showZoom": true
+        },
+        "layers": [
+          {
+            "config": {
+              "showLegend": true,
+              "style": {
+                "color": {
+                  "field": "affected_customers",
+                  "fixed": "red"
+                },
+                "opacity": 0.9,
+                "rotation": {
+                  "fixed": 0,
+                  "max": 360,
+                  "min": -360,
+                  "mode": "mod"
+                },
+                "size": {
+                  "fixed": 12,
+                  "max": 15,
+                  "min": 2
+                },
+                "symbol": {
+                  "fixed": "img/icons/marker/x-mark.svg",
+                  "mode": "fixed"
+                },
+                "symbolAlign": {
+                  "horizontal": "center",
+                  "vertical": "center"
+                },
+                "text": {
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "textConfig": {
+                  "fontSize": 12,
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "textAlign": "center",
+                  "textBaseline": "middle"
+                }
+              }
+            },
+            "filterData": {
+              "id": "byRefId",
+              "options": "Location Geometry"
+            },
+            "layer-tooltip": false,
+            "location": {
+              "latitude": "latitude",
+              "longitude": "longitude",
+              "mode": "coords"
+            },
+            "name": "Affected",
+            "tooltip": true,
+            "type": "markers"
+          }
+        ],
+        "tooltip": {
+          "mode": "details"
+        },
+        "view": {
+          "allLayers": true,
+          "id": "fit",
+          "lastOnly": false,
+          "lat": -10,
+          "layer": "Affected",
+          "lon": -140,
+          "noRepeat": false,
+          "padding": 60,
+          "shared": true,
+          "zoom": 15
+        }
+      },
+      "pluginVersion": "12.2.0",
+      "targets": [
+        {
+          "dataset": "outages",
+          "datasource": {
+            "type": "grafana-postgresql-datasource",
+            "uid": "cf1leehcbn11cd"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT\r\n    ST_Y(ST_Centroid(location_geometry)) AS latitude,\r\n    ST_X(ST_Centroid(location_geometry)) AS longitude,\r\n\r\n    provider,\r\n    location_description,\r\n    affected_customers,\r\n    cause,\r\n    schedule_type \r\nFROM\r\n    power_outages\r\nWHERE\r\n    status = 'active'; ",
+          "refId": "Location Geometry",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Active Power Outages",
+      "type": "geomap"
+    },
+    {
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "cf1leehcbn11cd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.2.0",
+      "targets": [
+        {
+          "dataset": "outages",
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "WITH time_window AS (\r\n  -- TODO: Use $__timeFrom and $__timeTo to be dynamic.\r\n  SELECT (NOW() - INTERVAL '1 month') AS start_date, NOW() AS end_date\r\n),\r\ntime_series AS (\r\n  SELECT generate_series(\r\n    date_bin('$bucket_interval', (SELECT start_date FROM time_window), '2000-01-01 00:00:00'),\r\n    (SELECT end_date FROM time_window),\r\n    '$bucket_interval'\r\n  ) AS time_bucket\r\n),\r\nall_providers AS (\r\n  -- Get unique list of relevant providers.\r\n  SELECT DISTINCT provider FROM power_outages WHERE start_time >= (SELECT start_date FROM time_window)\r\n),\r\nscaffold AS (\r\n  -- Create template of every provider for every time bucket.\r\n  SELECT time_bucket, provider FROM time_series CROSS JOIN all_providers\r\n)\r\n-- Join the complete template against the outages table based on overlapping time.\r\nSELECT\r\n  s.time_bucket AS \"time\",\r\n  s.provider AS metric,\r\n  -- Count the distinct outages that were active during this specific time bucket.\r\n  COUNT(DISTINCT po.id) AS value\r\nFROM\r\n  scaffold s\r\nLEFT JOIN\r\n  power_outages po ON\r\n    -- The provider must match.\r\n    po.provider = s.provider AND\r\n    -- AND the outage must have started ON OR BEFORE this time bucket began.\r\n    po.start_time <= s.time_bucket AND\r\n    (po.end_time > s.time_bucket OR po.end_time IS NULL)\r\nGROUP BY\r\n  s.time_bucket, s.provider\r\nORDER BY\r\n  \"time\", metric;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Power Outages by Provider",
+      "transformations": [
+        {
+          "id": "partitionByValues",
+          "options": {
+            "fields": [
+              "metric"
+            ],
+            "keepFields": false
+          }
+        }
+      ],
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "cf1leehcbn11cd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "fixed"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 9
+      },
+      "id": 4,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.97,
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "orientation": "auto",
+        "showValue": "auto",
+        "stacking": "none",
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 0
+      },
+      "pluginVersion": "12.2.0",
+      "targets": [
+        {
+          "dataset": "outages",
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT\r\n  cause,\r\n  COUNT(id) AS value\r\nFROM\r\n  power_outages\r\nWHERE\r\n  $__timeFilter(start_time) \r\nGROUP BY\r\n  cause\r\nORDER BY\r\n  value DESC\r\nLIMIT 5;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Top Outage Causes",
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "cf1leehcbn11cd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 12
+      },
+      "id": 3,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.2.0",
+      "targets": [
+        {
+          "dataset": "outages",
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT\r\n  COUNT(*) FILTER (WHERE schedule_type = 'planned') AS Planned,\r\n  COUNT(*) FILTER (WHERE schedule_type != 'planned' OR schedule_type IS NULL) AS Unplanned\r\nFROM\r\n  power_outages\r\nWHERE\r\n  status = 'active' AND start_time <= NOW();",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Active Power Outages Count",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "cf1leehcbn11cd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 17
+      },
+      "id": 5,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.2.0",
+      "targets": [
+        {
+          "dataset": "outages",
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "WITH time_window AS (\r\n  -- Use to_timestamp with Grafana's epoch variables. This is the most reliable method.\r\n  SELECT to_timestamp($__unixEpochFrom()) AS start_date, to_timestamp($__unixEpochTo()) AS end_date\r\n),\r\nrelevant_outages AS (\r\n  SELECT provider, start_time, end_time, affected_customers\r\n  FROM power_outages\r\n  WHERE start_time <= (SELECT end_date FROM time_window) AND\r\n        (end_time >= (SELECT start_date FROM time_window) OR end_time IS NULL)\r\n),\r\ntime_series AS (\r\n  SELECT generate_series(\r\n    date_bin('$bucket_interval', (SELECT start_date FROM time_window), '2000-01-01 00:00:00'),\r\n    (SELECT end_date FROM time_window),\r\n    '$bucket_interval'\r\n  ) AS time_bucket\r\n),\r\nall_providers AS (\r\n  SELECT DISTINCT provider FROM relevant_outages\r\n),\r\nscaffold AS (\r\n  SELECT time_bucket, provider FROM time_series CROSS JOIN all_providers\r\n)\r\nSELECT\r\n  s.time_bucket AS \"time\",\r\n  s.provider AS metric,\r\n  COALESCE(SUM(ro.affected_customers), 0) AS value\r\nFROM\r\n  scaffold s\r\nLEFT JOIN\r\n  relevant_outages ro ON\r\n    ro.provider = s.provider AND\r\n    ro.start_time <= s.time_bucket AND\r\n    (ro.end_time > s.time_bucket OR ro.end_time IS NULL)\r\nGROUP BY\r\n  s.time_bucket, s.provider\r\nORDER BY\r\n  \"time\", metric;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Affected Customers by Provider",
+      "type": "timeseries"
+    }
+  ],
+  "preload": false,
+  "schemaVersion": 42,
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "text": "1 hour",
+          "value": "1 hour"
+        },
+        "label": "Time Bucket",
+        "name": "bucket_interval",
+        "options": [
+          {
+            "selected": true,
+            "text": "1 Hour",
+            "value": "1 hour"
+          },
+          {
+            "selected": false,
+            "text": "6 Hours",
+            "value": "6 hours"
+          },
+          {
+            "selected": false,
+            "text": "12 Hours",
+            "value": "12 hours"
+          },
+          {
+            "selected": false,
+            "text": "1 Day",
+            "value": "1 day"
+          },
+          {
+            "selected": false,
+            "text": "1 Week",
+            "value": "7 days"
+          },
+          {
+            "selected": false,
+            "text": "2 Weeks",
+            "value": "14 days"
+          },
+          {
+            "selected": false,
+            "text": "1 Month",
+            "value": "30 days"
+          }
+        ],
+        "query": "1 Hour : 1 hour, 6 Hours : 6 hours, 12 Hours : 12 hours, 1 Day : 1 day, 1 Week : 7 days, 2 Weeks : 14 days, 1 Month : 30 days",
+        "type": "custom"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-7d",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Power Outages",
+  "uid": "ad4r4p7",
+  "version": 12
+}

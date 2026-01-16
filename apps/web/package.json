@@ -1,0 +1,10 @@
+{
+    "name": "web",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "build": "echo 'No build script yet'",
+        "dev": "echo 'No Web script yet'",
+        "start": "echo 'No Web script yet'"
+    }
+}

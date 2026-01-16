@@ -1,0 +1,9 @@
+packages/shared
+node_modules
+.venv
+**/.venv
+.git
+.turbo
+dist
+output
+*.log

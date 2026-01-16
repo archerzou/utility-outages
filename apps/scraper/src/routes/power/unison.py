@@ -1,0 +1,1 @@
+# Hawke's Bay, Taupō, and Rotorua

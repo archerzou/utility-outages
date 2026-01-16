@@ -1,0 +1,84 @@
+services:
+  # TimescaleDB with PostGIS extension
+  db:
+    image: timescale/timescaledb-ha:pg17-all
+    container_name: utility-outage-db
+    environment:
+      # Database credentials from .env
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    ports:
+      # DB connection port (Exposed on 5433 to avoid local conflict)
+      - "5433:5432"
+    volumes:
+      # Persistent volume for DB data
+      - outage_data:/var/lib/postgresql/data
+      # Initialization SQL script
+      - ./apps/scraper/src/database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      # Ensure DB is ready for app connections
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: always
+
+  # Main application service
+  python-app:
+    build:
+      # Build settings from local Dockerfile
+      context: .
+      dockerfile: apps/scraper/Dockerfile
+    container_name: utility-outage-app
+    # Database connection settings
+    environment:
+      - DB_HOST=db
+      - DB_NAME=${POSTGRES_DB}
+      - DB_USER=${POSTGRES_USER}
+      - DB_PASSWORD=${POSTGRES_PASSWORD}
+      - DB_PORT=5432 # Connect internally to standard port
+    ports:
+      # Application server port
+      - "8080:8080"
+    volumes:
+      # Bind mount for live code updates
+      - ./apps/scraper:/home/appuser/apps/scraper
+      - ./packages/db:/home/appuser/packages/db
+      # Prevent host .venv from overwriting container's venv
+      - /home/appuser/apps/scraper/.venv
+    depends_on:
+      # Wait for database healthcheck
+      db:
+        condition: service_healthy
+    restart: always
+
+  # Grafana monitoring and dashboards
+  grafana:
+    image: grafana/grafana:latest
+    container_name: utility-outage-grafana
+    environment:
+      # Admin user credentials from .env
+      GF_SECURITY_ADMIN_USER: ${GF_SECURITY_ADMIN_USER}
+      GF_SECURITY_ADMIN_PASSWORD: ${GF_SECURITY_ADMIN_PASSWORD}
+      # Configuration and data paths
+      GF_PATHS_DATA: /var/lib/grafana
+      GF_PATHS_PROVISIONING: /etc/grafana/provisioning
+    volumes:
+      # Dashboard and data source provisioning
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning/dashboards
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
+    ports:
+      # Grafana UI port
+      - "3000:3000"
+    depends_on:
+      # Wait for database healthcheck
+      db:
+        condition: service_healthy
+    restart: always
+
+# Named volumes for persistent storage
+volumes:
+  outage_data:
+  grafana_data:
