@@ -1,5 +1,6 @@
 {
   "lockfileVersion": 1,
+  "configVersion": 0,
   "workspaces": {
     "": {
       "name": "utility-outage-monorepo",
@@ -14,14 +15,23 @@
     "apps/scraper": {
       "name": "scraper",
       "version": "0.1.0",
+      "dependencies": {
+        "db": "workspace:*",
+      },
     },
     "apps/web": {
       "name": "web",
       "version": "0.1.0",
     },
+    "packages/db": {
+      "name": "db",
+      "version": "0.1.0",
+    },
   },
   "packages": {
     "api": ["api@workspace:apps/api"],
+
+    "db": ["db@workspace:packages/db"],
 
     "scraper": ["scraper@workspace:apps/scraper"],
 
