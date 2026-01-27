@@ -1,0 +1,510 @@
+[
+  {
+    "id": "528239",
+    "provider": "nzta",
+    "category": "road_closure",
+    "status": "active",
+    "event_type": "area warning",
+    "schedule_type": "planned",
+    "start_time": "2025-12-04 18:00:00",
+    "end_time": "2025-12-07 06:00:00",
+    "created_time": "2025-10-23 18:43:38",
+    "last_updated": "2025-12-04T20:30:11",
+    "description": "Maintenance",
+    "comments": "Due to road patching work, there will be Stop/Go traffic management with a 30km/h speed restriction in place on Thursday 4th December for 3 nights between 6pm and 6am. Plan your journey accordingly allowing extra time for your travel. Please note these works are weather dependent and may be postponed at short notice.",
+    "impact": "Caution",
+    "region": [
+      "manawatū-whanganui"
+    ],
+    "location_description": "SH 3 Whanganui between the Putiki Roundabout and Cobham Bridge",
+    "location_geometry": {
+      "type": "MultiLineString",
+      "coordinates": [
+        [
+          [
+            175.05025000000134,
+            -39.948050086414476
+          ],
+          [
+            175.04738000000145,
+            -39.945970086413155
+          ]
+        ]
+      ]
+    },
+    "detour_description": "Not Applicable",
+    "expected_resolution": "06/12/2025 06:00"
+  },
+  {
+    "id": "488095",
+    "provider": "nzta",
+    "category": "road_closure",
+    "status": "active",
+    "event_type": "area warning",
+    "schedule_type": "planned",
+    "start_time": "2022-11-01 01:37:28",
+    "end_time": null,
+    "created_time": "2025-06-16 09:22:58",
+    "last_updated": "2025-12-04T20:30:08",
+    "description": "Road Works",
+    "comments": "Due to works for the SH58 Safety Improvements Project, there is stop/go traffic control, temporary lane shifts, and various speed restrictions in place. Plan your journey accordingly, allowing extra time to travel through this area.",
+    "impact": "Caution",
+    "region": [
+      "wellington"
+    ],
+    "location_description": "SH 58 Haywards, between Hebden Crescent and Bradey Road intersection",
+    "location_geometry": {
+      "type": "MultiLineString",
+      "coordinates": [
+        [
+          [
+            174.97479000000305,
+            -41.156820086988326
+          ],
+          [
+            174.97871000000293,
+            -41.152630086986974
+          ],
+          [
+            174.97958000000293,
+            -41.13912008698265
+          ],
+          [
+            174.97066000000316,
+            -41.12622008697848
+          ],
+          [
+            174.95766000000353,
+            -41.11730008697558
+          ],
+          [
+            174.94667000000385,
+            -41.11928008697622
+          ],
+          [
+            174.9233200000045,
+            -41.117140086975546
+          ],
+          [
+            174.91957000000457,
+            -41.113950086974484
+          ]
+        ]
+      ]
+    },
+    "detour_description": "Not Applicable",
+    "expected_resolution": "Until further notice"
+  },
+  {
+    "id": "532410",
+    "provider": "nzta",
+    "category": "road_closure",
+    "status": "active",
+    "event_type": "road work",
+    "schedule_type": "planned",
+    "start_time": "2025-12-04 20:00:24",
+    "end_time": "2025-12-05 04:00:24",
+    "created_time": "2025-12-04 19:18:13",
+    "last_updated": "2025-12-04T20:04:57",
+    "description": "Maintenance",
+    "comments": "Due to maintenance works, there will be Stop/Go traffic management with a 30km/h speed restriction in place. Take extra care.",
+    "impact": "Caution",
+    "region": [
+      "wellington"
+    ],
+    "location_description": "SH 1 Otaki, near the intersection of Lawlors Road",
+    "location_geometry": {
+      "type": "Point",
+      "coordinates": [
+        175.17330567953158,
+        -40.74222533177901
+      ]
+    },
+    "detour_description": "Not Applicable",
+    "expected_resolution": "Until further notice"
+  },
+  {
+    "id": "530731",
+    "provider": "nzta",
+    "category": "road_closure",
+    "status": "active",
+    "event_type": "road closure",
+    "schedule_type": "planned",
+    "start_time": "2025-11-30 20:00:00",
+    "end_time": "2025-12-05 05:00:00",
+    "created_time": "2025-11-18 09:48:57",
+    "last_updated": "2025-12-04T20:02:26",
+    "description": "Road Works",
+    "comments": "Due to temporary barrier installation and pavement testing works, this section of road will be closed in both directions on Sunday 30th November to Thursday 4th December nights between 8pm and 5am. Plan your journey accordingly allowing extra time for travel.",
+    "impact": "Road Closed",
+    "region": [
+      "hawke's bay"
+    ],
+    "location_description": "SH 2 Napier, between the intersections of Kennedy Road and Taradale Road",
+    "location_geometry": {
+      "type": "MultiLineString",
+      "coordinates": [
+        [
+          [
+            176.878289999934,
+            -39.51919008612599
+          ],
+          [
+            176.87683999993394,
+            -39.51137008612014
+          ]
+        ]
+      ]
+    },
+    "detour_description": "Detour via Kennedy Road and Taradale Road. HPMV detour via Meeanee Road, Awatoto Road, SH51 and SH50 (Prebensen Drive).",
+    "expected_resolution": "05/12/2025 05:00"
+  },
+  {
+    "id": "530633",
+    "provider": "nzta",
+    "category": "road_closure",
+    "status": "active",
+    "event_type": "road closure",
+    "schedule_type": "planned",
+    "start_time": "2025-11-24 09:00:00",
+    "end_time": "2025-12-19 05:30:00",
+    "created_time": "2025-11-17 10:35:01",
+    "last_updated": "2025-12-04T20:30:31",
+    "description": "Resurfacing",
+    "comments": "Due to resurfacing and maintenance works, this road will be closed in both directions on Monday 24th November to Friday 28th November between 9am and 3:30pm. Then, the road will close on Sunday to Thursday nights between 8pm and 5:30am from Sunday 30th November to Friday 19th December. Plan your journey accordingly, avoiding travel during these times if possible or waiting for the convoys as per details below.",
+    "impact": "Road Closed",
+    "region": [
+      "nelson and marlborough"
+    ],
+    "location_description": "SH 60 Riwaka to Upper Takaka (Takaka Hill)",
+    "location_geometry": {
+      "type": "MultiLineString",
+      "coordinates": [
+        [
+          [
+            172.82304000006306,
+            -41.03355008695748
+          ],
+          [
+            172.83201000006278,
+            -41.03635008695838
+          ],
+          [
+            172.83900000006267,
+            -41.03229008695689
+          ],
+          [
+            172.84594000006228,
+            -41.04374008696082
+          ],
+          [
+            172.84370000006246,
+            -41.034910086957765
+          ],
+          [
+            172.85174000006234,
+            -41.02988008695592
+          ],
+          [
+            172.84775000006258,
+            -41.01827008695189
+          ],
+          [
+            172.85829000006214,
+            -41.02988008695587
+          ],
+          [
+            172.85469000006213,
+            -41.034900086957684
+          ],
+          [
+            172.86751000006186,
+            -41.03024008695591
+          ],
+          [
+            172.8759200000616,
+            -41.03108008695616
+          ],
+          [
+            172.88037000006165,
+            -41.02153008695275
+          ],
+          [
+            172.88688000006147,
+            -41.01863008695168
+          ],
+          [
+            172.90016000006108,
+            -41.019600086951904
+          ],
+          [
+            172.90234000006097,
+            -41.02339008695321
+          ],
+          [
+            172.9206900000605,
+            -41.022310086952686
+          ],
+          [
+            172.93001000006015,
+            -41.0269300869542
+          ],
+          [
+            172.9296900000602,
+            -41.029470086955115
+          ],
+          [
+            172.94394000005977,
+            -41.030140086955214
+          ],
+          [
+            172.94127000005972,
+            -41.03683008695758
+          ],
+          [
+            172.95357000005927,
+            -41.04250008695944
+          ],
+          [
+            172.96380000005885,
+            -41.05454008696351
+          ]
+        ]
+      ]
+    },
+    "detour_description": "No detour available. There will be a convoy for queued traffic through the site at 11:30am during day closures and at the Aaron Creek Road closure point at 12:30am or at the Riwaka Valley Road closure point at 1am during night closures",
+    "expected_resolution": "19/12/2025 05:30"
+  },
+  {
+    "id": "527645",
+    "provider": "nzta",
+    "category": "road_closure",
+    "status": "active",
+    "event_type": "road closure",
+    "schedule_type": "planned",
+    "start_time": "2025-12-01 20:00:00",
+    "end_time": "2026-02-28 06:00:00",
+    "created_time": "2025-11-24 08:11:27",
+    "last_updated": "2025-12-04T20:30:18",
+    "description": "Road Works",
+    "comments": "Due to underslip repair works, this section of road will be closed in both directions on Sunday to Friday nights between 8pm and 6am from Monday 1st December to Saturday 28th February (Excluding Thursday 18th December to Sunday 4th January). Plan your journey accordingly, avoiding travel during these times.",
+    "impact": "Road Closed",
+    "region": [
+      "hawke's bay"
+    ],
+    "location_description": "SH 38 Tuai to Lake Waikaremoana",
+    "location_geometry": {
+      "type": "MultiLineString",
+      "coordinates": [
+        [
+          [
+            177.13222999991612,
+            -38.81808008554274
+          ],
+          [
+            177.13601999991596,
+            -38.81353008553856
+          ],
+          [
+            177.1344299999159,
+            -38.80652008553204
+          ],
+          [
+            177.12957999991616,
+            -38.80778008553317
+          ],
+          [
+            177.12295999991628,
+            -38.79929008552524
+          ],
+          [
+            177.12451999991615,
+            -38.79274008551914
+          ],
+          [
+            177.13387999991568,
+            -38.78447008551152
+          ],
+          [
+            177.12877999991588,
+            -38.785020085511995
+          ],
+          [
+            177.13049999991568,
+            -38.7750800855027
+          ],
+          [
+            177.13553999991544,
+            -38.76939008549741
+          ],
+          [
+            177.13385999991547,
+            -38.76692008549507
+          ],
+          [
+            177.15915999991427,
+            -38.7547700854839
+          ]
+        ]
+      ]
+    },
+    "detour_description": "No detour available. Please note access is permitted to Rosie Bay Campsite during these works.",
+    "expected_resolution": "28/02/2026 06:00"
+  },
+  {
+    "id": "532356",
+    "provider": "nzta",
+    "category": "road_closure",
+    "status": "scheduled",
+    "event_type": "road closure",
+    "schedule_type": "planned",
+    "start_time": "2025-12-04 21:00:00",
+    "end_time": "2025-12-05 05:00:00",
+    "created_time": "2025-12-04 13:27:17",
+    "last_updated": "2025-12-04T19:24:46",
+    "description": "Maintenance",
+    "comments": "This closure is dependent on various factors, including weather, and may be postponed or cancelled at late notice. Road users should plan accordingly and allow extra time for the detour.",
+    "impact": "Road Closed",
+    "region": [
+      "auckland"
+    ],
+    "location_description": "SH 20 Massey Road On-ramp Southbound",
+    "location_geometry": {
+      "type": "Point",
+      "coordinates": [
+        174.81725739114864,
+        -36.973179912294285
+      ]
+    },
+    "detour_description": "Follow posted detour.",
+    "expected_resolution": "05/12/2025 05:00"
+  },
+  {
+    "id": "532408",
+    "provider": "nzta",
+    "category": "road_closure",
+    "status": "active",
+    "event_type": "road closure",
+    "schedule_type": "unplanned",
+    "start_time": "2025-12-04 17:50:00",
+    "end_time": null,
+    "created_time": "2025-12-04 19:13:45",
+    "last_updated": "2025-12-04T19:24:49",
+    "description": "Crash",
+    "comments": "Due to a 2-vehicle crash, east of Omalo, SH35 is currently CLOSED in both directions. No detour is available. Expect delays.",
+    "impact": "Road Closed",
+    "region": [
+      "bay of plenty"
+    ],
+    "location_description": "SH 35 Opotiki to Te Araroa",
+    "location_geometry": {
+      "type": "Point",
+      "coordinates": [
+        177.66915576306,
+        -37.80142821167047
+      ]
+    },
+    "detour_description": "No detour available.  Follow the directions of the Emergency Services.",
+    "expected_resolution": "Until further notice"
+  },
+  {
+    "id": "526542",
+    "provider": "nzta",
+    "category": "road_closure",
+    "status": "active",
+    "event_type": "road work",
+    "schedule_type": "planned",
+    "start_time": "2025-10-28 06:00:00",
+    "end_time": "2025-12-18 18:00:00",
+    "created_time": "2025-10-09 07:04:49",
+    "last_updated": "2025-12-04T19:21:01",
+    "description": "Resurfacing",
+    "comments": "Due to various works, there will be Stop/Go traffic management in place from Tuesday 28th October to Thursday 18th December between 6am and 6pm (Excluding Friday 28th November) . Plan your journey accordingly and expect up to 20 minute delays.",
+    "impact": "Delays",
+    "region": [
+      "manawatū-whanganui"
+    ],
+    "location_description": "SH 2 Norsewood, near the intersection with Vaughan Road",
+    "location_geometry": {
+      "type": "Point",
+      "coordinates": [
+        176.2469892051705,
+        -40.04935492324305
+      ]
+    },
+    "detour_description": "Not Applicable",
+    "expected_resolution": "Until further notice"
+  },
+  {
+    "id": "529309",
+    "provider": "nzta",
+    "category": "road_closure",
+    "status": "active",
+    "event_type": "road closure",
+    "schedule_type": "planned",
+    "start_time": "2025-12-02 19:00:00",
+    "end_time": "2025-12-12 06:00:00",
+    "created_time": "2025-11-03 16:27:40",
+    "last_updated": "2025-12-04T20:30:22",
+    "description": "Resurfacing",
+    "comments": "Road Resurfacing, Night time road closures between Kinleith and Upper Atiamuri, Occurring Sunday to Thursday nights between 7pm to 6am (finishing Friday morning). Works are weather dependent - Please plan your journey. \n\nThere is an additional night time closure on Friday 5 December between 7pm and 6am (finishing Saturday morning). Plan ahead and expect delays.",
+    "impact": "Road Closed",
+    "region": [
+      "waikato"
+    ],
+    "location_description": "SH 01 Kinleith to Upper Atiamuri",
+    "location_geometry": {
+      "type": "MultiLineString",
+      "coordinates": [
+        [
+          [
+            175.87723676866725,
+            -38.22660233747794
+          ],
+          [
+            175.88867052127583,
+            -38.25155138828809
+          ],
+          [
+            175.89881673246555,
+            -38.26421349519784
+          ],
+          [
+            175.90476336854027,
+            -38.28122327565864
+          ],
+          [
+            175.91819933799727,
+            -38.287348371417785
+          ],
+          [
+            175.9321192423856,
+            -38.288616711032084
+          ],
+          [
+            175.94129608737217,
+            -38.29821447509867
+          ],
+          [
+            175.96430873721638,
+            -38.301139228172346
+          ],
+          [
+            175.97253914638895,
+            -38.31150798349487
+          ],
+          [
+            176.00275312901195,
+            -38.33276589421972
+          ],
+          [
+            176.00719292498897,
+            -38.34557813609212
+          ]
+        ]
+      ]
+    },
+    "detour_description": "northbound -SH30 Ongaroto Road, SH32 Maraetai Road Reversed for southbound",
+    "expected_resolution": "12/12/2025 06:00"
+  }
+]

@@ -1,10 +1,47 @@
 {
-    "name": "web",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "build": "echo 'No build script yet'",
-        "dev": "echo 'No Web script yet'",
-        "start": "echo 'No Web script yet'"
-    }
+  "name": "events_map",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mantine/core": "^8.3.7",
+    "@mantine/dates": "^8.3.7",
+    "@mantine/hooks": "^8.3.7",
+    "@mantine/modals": "^8.3.7",
+    "@mantine/notifications": "^8.3.7",
+    "@mantine/spotlight": "^8.3.7",
+    "@neondatabase/serverless": "^1.0.2",
+    "@tabler/icons-react": "^3.35.0",
+    "@types/leaflet": "^1.9.21",
+    "@types/leaflet.markercluster": "^1.5.6",
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3",
+    "leaflet": "^1.9.4",
+    "leaflet.markercluster": "^1.5.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-leaflet": "^5.0.0",
+    "react-leaflet-markercluster": "^5.0.0-rc.0",
+    "zustand": "^5.0.10"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^24.10.0",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^5.1.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.3",
+    "vite": "^7.2.2"
+  }
 }

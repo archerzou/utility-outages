@@ -1,0 +1,332 @@
+[
+    {
+        "id": "315696",
+        "provider": "orion",
+        "category": "power_outage",
+        "status": "active",
+        "schedule_type": "unplanned",
+        "start_time": "2025-11-10T12:26:22+13:00",
+        "end_time": null,
+        "last_updated": "2025-11-10T12:26:22",
+        "fetched_at": "2025-11-11T06:46:54.591682+00:00",
+        "cause": "Vehicle contact vs Orion asset",
+        "location_description": "Belfast: Harts Creek Lane",
+        "location_geometry": {
+            "type": "Point",
+            "coordinates": [
+                172.6058577462,
+                -43.4432652786
+            ]
+        },
+        "region": "canterbury",
+        "affected_customers": 4,
+        "information_url": "https://outages.oriongroup.co.nz/#/outage/315696",
+        "comments": "",
+        "latest_update": "",
+        "reschedule_history": []
+    },
+    {
+        "id": "310843",
+        "provider": "orion",
+        "category": "power_outage",
+        "status": "restored",
+        "schedule_type": "planned",
+        "start_time": "2025-11-12T08:30:00+13:00",
+        "end_time": "2025-11-12T13:00:00+13:00",
+        "last_updated": "2025-11-11T19:45:08.9070729+13:00",
+        "fetched_at": "2025-11-11T06:46:54.591682+00:00",
+        "cause": "Planned isolation",
+        "location_description": "Halkett: Old West Coast Road",
+        "location_geometry": {
+            "type": "Point",
+            "coordinates": [
+                172.4119757795,
+                -43.4993219503
+            ]
+        },
+        "region": "canterbury",
+        "affected_customers": 1,
+        "information_url": "https://outages.oriongroup.co.nz/#/outage/310843",
+        "comments": "",
+        "latest_update": "",
+        "reschedule_history": []
+    },
+    {
+        "id": "310860",
+        "provider": "orion",
+        "category": "power_outage",
+        "status": "restored",
+        "schedule_type": "planned",
+        "start_time": "2025-11-12T08:30:00+13:00",
+        "end_time": "2025-11-12T16:00:00+13:00",
+        "last_updated": "2025-11-11T19:45:08.9070729+13:00",
+        "fetched_at": "2025-11-11T06:46:54.591682+00:00",
+        "cause": "Planned isolation",
+        "location_description": "Duvauchelle, Robinsons Bay: Kingstons Hill, Okains Bay Road, Robinsons Bay Valley Road, Sawmill Road, School Road, Tizzards Road",
+        "location_geometry": {
+            "type": "Point",
+            "coordinates": [
+                172.9620721905,
+                -43.76116303
+            ]
+        },
+        "region": "canterbury",
+        "affected_customers": 28,
+        "information_url": "https://outages.oriongroup.co.nz/#/outage/310860",
+        "comments": "High voltage maintenance",
+        "latest_update": "High voltage maintenance",
+        "reschedule_history": []
+    },
+    {
+        "id": "315834",
+        "provider": "orion",
+        "category": "power_outage",
+        "status": "cancelled",
+        "schedule_type": "planned",
+        "start_time": "2025-11-17T18:00:00+13:00",
+        "end_time": "2025-11-18T04:00:00+13:00",
+        "last_updated": "2025-11-11T19:45:08.9070729+13:00",
+        "fetched_at": "2025-11-11T06:46:54.591682+00:00",
+        "cause": "Planned isolation",
+        "location_description": "Woolston: Cumnor Terrace",
+        "location_geometry": {
+            "type": "Point",
+            "coordinates": [
+                172.6849099538,
+                -43.5600259422
+            ]
+        },
+        "region": "canterbury",
+        "affected_customers": 0,
+        "information_url": "https://outages.oriongroup.co.nz/#/outage/315834",
+        "comments": "Kiosk change",
+        "latest_update": "Kiosk change",
+        "reschedule_history": [
+            {
+                "original_start_time": "2025-11-17T18:00:00+13:00",
+                "new_start_time": "2025-11-18T18:00:00+13:00",
+                "reason": "Rescheduled to alternate date."
+            }
+        ]
+    },
+     {
+        "id": "cc596782-68ca-4a79-bbd6-6fcc93c74032",
+        "provider": "alpine_energy",
+        "category": "power_outage",
+        "status": "postponed",
+        "schedule_type": "planned",
+        "start_time": "2025-11-24T19:30:00+00:00",
+        "end_time": "2025-11-25T03:30:00+00:00",
+        "last_updated": "2025-11-11T02:48:03.586000+00:00",
+        "fetched_at": "2025-11-11T06:46:54.887547+00:00",
+        "cause": "Notified Interruption Equipment",
+        "location_description": "Fairlie: Stanton Road",
+        "location_geometry": {
+            "type": "Point",
+            "coordinates": [
+                170.73538388945445,
+                -44.047483154576874
+            ]
+        },
+        "region": "canterbury",
+        "affected_customers": null,
+        "information_url": "https://www.alpineenergy.co.nz/customers/outages/",
+        "comments": "Notified Interruption Equipment",
+        "latest_update": "Notified Interruption Equipment",
+        "reschedule_history": [
+            {
+                "original_start_time": "2025-11-24T19:30:00+00:00",
+                "new_start_time": "2025-11-26T00:00:00+00:00",
+                "reason": "Rescheduled to alternate date."
+            }
+        ]
+    },
+    {
+        "id": "WO2000070968",
+        "provider": "counties_energy",
+        "category": "power_outage",
+        "status": "active",
+        "schedule_type": "unplanned",
+        "start_time": "2025-11-11T17:34:59+13:00",
+        "end_time": "2025-11-11T21:45:00+13:00",
+        "last_updated": "2025-11-11T19:35:12+13:00",
+        "fetched_at": "2025-11-11T06:46:54.895880+00:00",
+        "cause": "No power to installation",
+        "location_description": "Chichester Drive Rosehill Papakura: PKST: URBAN",
+        "location_geometry": {
+            "type": "Point",
+            "coordinates": [
+                174.93399739097603,
+                -37.08156418766834
+            ]
+        },
+        "region": "auckland_waikato",
+        "affected_customers": 1,
+        "information_url": "https://www.countiesenergy.co.nz/outages",
+        "comments": null,
+        "latest_update": "Work Order created - Counties Energy Crew is currently on site and repairs are in progress, the estimated time of restoration is 11 Nov 8:35 PM.",
+        "reschedule_history": []
+    },
+     {
+        "id": "INCD-7359-M-77265",
+        "provider": "aurora_energy",
+        "category": "power_outage",
+        "status": "restored",
+        "schedule_type": "planned",
+        "start_time": "2025-11-10T20:00:00Z",
+        "end_time": "2025-11-11T03:00:00Z",
+        "last_updated": null,
+        "fetched_at": "2025-11-11T06:46:54.725682+00:00",
+        "cause": "Maintenance",
+        "location_description": " Cromwell: Felton Road",
+        "location_geometry": {
+            "type": "Point",
+            "coordinates": [
+                169.1546925425,
+                -45.081424965
+            ]
+        },
+        "region": "otago",
+        "affected_customers": 4,
+        "information_url": "https://www.auroraenergy.co.nz/outages/planned-outages",
+        "comments": null,
+        "latest_update": null,
+        "reschedule_history": []
+    },
+    {
+        "id": "CP00126548",
+        "provider": "counties_energy",
+        "category": "power_outage",
+        "status": "restored",
+        "schedule_type": "planned",
+        "start_time": "2025-11-11T09:00:00+13:00",
+        "end_time": "2025-11-11T15:30:00+13:00",
+        "last_updated": "2025-11-10T19:13:18+13:00",
+        "fetched_at": "2025-11-11T06:46:55.308755+00:00",
+        "cause": "Asset Renewal",
+        "location_description": "Lyons Rd, Buckingham Rd, Mangatawhiri: MERC",
+        "location_geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [
+                        175.12772401148504,
+                        -37.20266931930368
+                    ],
+                    [
+                        175.13688366681134,
+                        -37.20065899000938
+                    ],
+                    [
+                        175.14288384034808,
+                        -37.199105894312225
+                    ],
+                    [
+                        175.14981427341283,
+                        -37.18892476582889
+                    ],
+                    [
+                        175.14980895971658,
+                        -37.18806058038295
+                    ],
+                    [
+                        175.14780894567625,
+                        -37.188175044076374
+                    ],
+                    [
+                        175.12867234648115,
+                        -37.199549067872454
+                    ],
+                    [
+                        175.12842417593444,
+                        -37.199740176470826
+                    ],
+                    [
+                        175.12772401148504,
+                        -37.20266931930368
+                    ]
+                ]
+            ]
+        },
+        "region": "auckland_waikato",
+        "affected_customers": 15,
+        "information_url": "https://www.countiesenergy.co.nz/outages",
+        "comments": null,
+        "latest_update": "Scheduled",
+        "reschedule_history": []
+    },
+    {
+        "id": "CP00126198",
+        "provider": "counties_energy",
+        "category": "power_outage",
+        "status": "restored",
+        "schedule_type": "planned",
+        "start_time": "2025-11-11T10:00:00+13:00",
+        "end_time": "2025-11-11T16:00:00+13:00",
+        "last_updated": "2025-10-24T11:34:23+13:00",
+        "fetched_at": "2025-11-11T06:46:55.308755+00:00",
+        "cause": "Reactive",
+        "location_description": "Awhitu Rd, Given Rd, West Coast Rd,  McPike Rd, Tindalls Rd, Cemetery Rd, Pollok Wharf Rd, Dominkovich Rd, Lees Gully Rd, Cochrane Rd, Martin Rd, Barthow Rd, Pollok: MKHD",
+        "location_geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [
+                        174.57702501392504,
+                        -37.13041313475363
+                    ],
+                    [
+                        174.60598455444978,
+                        -37.17098411515255
+                    ],
+                    [
+                        174.61100119021506,
+                        -37.17015819118529
+                    ],
+                    [
+                        174.61154609936747,
+                        -37.16988237600929
+                    ],
+                    [
+                        174.61267521857684,
+                        -37.169209669737455
+                    ],
+                    [
+                        174.6346933185396,
+                        -37.149844682874765
+                    ],
+                    [
+                        174.64737870360182,
+                        -37.130640598844366
+                    ],
+                    [
+                        174.646305092905,
+                        -37.12832310508558
+                    ],
+                    [
+                        174.64583184108253,
+                        -37.12731646631052
+                    ],
+                    [
+                        174.64256324480624,
+                        -37.12684937368133
+                    ],
+                    [
+                        174.59874797379547,
+                        -37.125979753271835
+                    ],
+                    [
+                        174.57702501392504,
+                        -37.13041313475363
+                    ]
+                ]
+            ]
+        },
+        "region": "auckland_waikato",
+        "affected_customers": 96,
+        "information_url": "https://www.countiesenergy.co.nz/outages",
+        "comments": null,
+        "latest_update": "Scheduled",
+        "reschedule_history": []
+    }
+]
