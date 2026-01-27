@@ -24,7 +24,7 @@ services:
       retries: 5
     restart: always
 
-  # Main application service
+  # Data scraper service
   python-app:
     build:
       # Build settings from local Dockerfile
@@ -51,6 +51,47 @@ services:
       # Wait for database healthcheck
       db:
         condition: service_healthy
+    restart: always
+
+  # API service
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    container_name: utility-outage-api
+    environment:
+      - DB_HOST=db
+      - DB_NAME=${POSTGRES_DB}
+      - DB_USER=${POSTGRES_USER}
+      - DB_PASSWORD=${POSTGRES_PASSWORD}
+      - DB_PORT=5432
+      - API_PORT=8081
+    ports:
+      - "8081:8081"
+    volumes:
+      # Bind mount for live code updates
+      - ./apps/api:/home/appuser/apps/api
+      - ./packages/db:/home/appuser/packages/db
+      # Prevent host .venv from overwriting container's venv
+      - /home/appuser/apps/api/.venv
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: always
+
+  # Web frontend service
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        # API URL for the frontend to connect to backend
+        VITE_API_BASE_URL: http://localhost:8081
+    container_name: utility-outage-web
+    ports:
+      - "3001:80"
+    depends_on:
+      - api
     restart: always
 
   # Grafana monitoring and dashboards

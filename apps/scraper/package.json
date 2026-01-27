@@ -6,8 +6,5 @@
         "build": "echo 'No build script yet'",
         "dev": "docker compose exec python-app uv run python -m src.jobs.fetcher",
         "start": "docker compose exec python-app uv run python -m src.jobs.fetcher"
-    },
-    "dependencies": {
-        "db": "workspace:*"
     }
 }
