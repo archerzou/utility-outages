@@ -15,6 +15,9 @@ Real-time tracking and visualization of utility outages across New Zealand. This
 ### Polygon Area Display
 <img src="./apps/web/screenshots/polygon.png" alt="Outage Area Polygon" width="800" />
 
+### Event Search Page
+<img src="./apps/web/screenshots/events.png" alt="Events Search" width="800" />
+
 ---
 
 ## Table of Contents
@@ -574,30 +577,7 @@ docker compose exec python-app cat fetcher.log
 
 ---
 
-## Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Code Style
-
-- Python: Follow PEP 8, use type hints
-- TypeScript: Follow ESLint configuration
-- Commits: Use conventional commit messages
-
----
 
 ## License
 
 MIT License - see [LICENSE](LICENSE) for details.
-
----
-
-## Support
-
-For questions or issues, please [open an issue](https://github.com/archerzou/utility-outages/issues) on GitHub.
